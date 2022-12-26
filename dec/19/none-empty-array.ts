@@ -3,7 +3,7 @@ import { MyError } from './my-error';
 
 export type NonEmptyArray<T> = [T, ...T[]];
 
-export namespace NonEmptyArray {
+export module NonEmptyArray {
   export const is = <T>(arr: T[]): arr is NonEmptyArray<T> => arr.length > 0;
 
   export const zod = <T extends ZodTypeAny>(value: T) =>
